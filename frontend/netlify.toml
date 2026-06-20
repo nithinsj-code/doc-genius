@@ -1,4 +1,5 @@
 [build]
+  command = "echo \"window.DOCGENIUS_API_BASE = '${DOCGENIUS_API_BASE}';\" > config.js"
   publish = "."
 
 [[headers]]
