@@ -147,8 +147,9 @@
       const data = await res.json();
       if (!res.ok) throw new Error(data.detail || "Request failed");
 
-      qaHistory.unshift({ q: question, a: data.answer });
+      qaHistory.push({ q: question, a: data.answer });
       renderHistory();
+      pdfOutput.scrollTop = pdfOutput.scrollHeight;
       pdfQuestion.value = "";
     } catch (err) {
       setOutput(pdfOutput, `Error: ${err.message}`, { error: true });
@@ -164,8 +165,8 @@
       .map(
         (pair) => `
         <div class="qa-pair">
-          <div class="qa-q">Q: ${escapeHtml(pair.q)}</div>
-          <div>${escapeHtml(pair.a)}</div>
+          <div class="qa-q">${escapeHtml(pair.q)}</div>
+          <div class="qa-a">${escapeHtml(pair.a)}</div>
         </div>`
       )
       .join("");

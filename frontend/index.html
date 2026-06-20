@@ -13,11 +13,7 @@
   <header class="site">
     <div class="eyebrow">Document intelligence, on demand</div>
     <h1 class="logo-mark">
-      Doc<span class="highlight"><span>Genius</span>
-        <svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M2,14 C40,20 160,20 198,12 L198,18 C160,24 40,24 2,18 Z" fill="var(--amber)" opacity="0.55"/>
-        </svg>
-      </span>
+      Doc<span class="highlight">Genius</span>
     </h1>
     <p class="tagline">Upload a PDF and ask it questions, or generate fresh content with Gemini — all from one page.</p>
 
@@ -28,28 +24,6 @@
   </header>
 
   <main class="panels">
-
-    <!-- ---------------- Gemini Generator Panel ---------------- -->
-    <section class="panel panel--gen">
-      <div class="panel-head">
-        <div class="panel-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
-        </div>
-        <div>
-          <h2>AI Content Generator</h2>
-          <p>Give Gemini a prompt and get a response back instantly.</p>
-        </div>
-      </div>
-
-      <label class="field-label" for="genPrompt">Your prompt</label>
-      <textarea id="genPrompt" rows="4" placeholder="e.g. Write a short product description for a noise-cancelling headphone."></textarea>
-
-      <div class="btn-row">
-        <button class="btn btn-amber" id="genBtn">Generate</button>
-      </div>
-
-      <div class="output empty" id="genOutput">Your generated response will appear here.</div>
-    </section>
 
     <!-- ---------------- PDF Chat Panel ---------------- -->
     <section class="panel panel--pdf">
@@ -76,11 +50,33 @@
         <label class="field-label" for="pdfQuestion">Your question</label>
         <input type="text" id="pdfQuestion" placeholder="e.g. What is the main conclusion of this document?" />
         <div class="btn-row">
-          <button class="btn btn-teal" id="askBtn">Ask</button>
+          <button class="btn btn-amber" id="askBtn">Ask</button>
         </div>
       </div>
 
       <div class="output empty" id="pdfOutput">Answers about your PDF will appear here.</div>
+    </section>
+
+    <!-- ---------------- Gemini Generator Panel ---------------- -->
+    <section class="panel panel--gen">
+      <div class="panel-head">
+        <div class="panel-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
+        </div>
+        <div>
+          <h2>AI Content Generator</h2>
+          <p>Give Gemini a prompt and get a response back instantly.</p>
+        </div>
+      </div>
+
+      <label class="field-label" for="genPrompt">Your prompt</label>
+      <textarea id="genPrompt" rows="4" placeholder="e.g. Write a short product description for a noise-cancelling headphone."></textarea>
+
+      <div class="btn-row">
+        <button class="btn btn-amber" id="genBtn">Generate</button>
+      </div>
+
+      <div class="output empty" id="genOutput">Your generated response will appear here.</div>
     </section>
 
   </main>
