@@ -36,7 +36,7 @@ ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "*")
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
 
-EMBEDDING_MODEL = "models/embedding-001"
+EMBEDDING_MODEL = "models/gemini-embedding-2"
 CHAT_MODEL = "gemini-1.5-flash"
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
